@@ -1,19 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../utils/Navbar"
 
 export default function Home() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="min-h-screen bg-black flex justify-center items-center">
-        Home Page
-      </div>
+      <Navbar />
+      <main>
+        <section 
+        className={`banner-sec bg-[url('../assets/01..jpg')] 
+        min-h-screen bg-top bg-no-repeat bg-cover`}>
+          <div className="container mx-auto px-[15px]"></div>
+        </section>
+      </main>
     </>
   );
 }
