@@ -61,7 +61,6 @@ Header Section(Navbar)
   color: black;
 }
 
-
 .nav-logo > a {
   width: 172px;
 }
@@ -107,6 +106,34 @@ Header Section(Navbar)
   color: var(--primary-color);
   font-weight: 500;
   font-family: var(--clash-font);
+  position: relative;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+
+.auth-btn::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  background: var(--primary-color);
+  top: 0;
+  right: -10px;
+  bottom: 0;
+  transition: 1s linear;
+  opacity: 0;
+}
+
+.auth-btn > span {
+  transition-delay: 0.5s;
+  transition: 1s linear;
+}
+
+.auth-btn:hover::after {
+  transform: scaleX(1000);
+}
+
+.auth-btn:hover > span {
+  color: black !important;
 }
 
 .navbar-toggler {
@@ -133,9 +160,9 @@ Header Section(Navbar)
 
 @media screen and (max-width: 768px) {
   .nav-logo > a {
-    width: 100px;
+    width: 80px;
   }
   .auth-btn {
-    font-size: 12px;
+    font-size: 10px;
   }
 }

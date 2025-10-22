@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <main>
         <section
-          className={`banner-sec bg-[url('../assets/01..jpg')] 
+          className={`banner-sec bg-[url('../assets/01..png')] 
         min-h-screen bg-top bg-no-repeat bg-cover`}
         >
           <div className="container mx-auto px-[15px]"></div>
