@@ -1,37 +1,141 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-4xl: 1820px;
+  --breakpoint-3xl: 1400px;
+}
+
+@font-face {
+  font-family: Akira-Expanded;
+  src: url("../font/Akira.otf");
+}
+
+@font-face {
+  font-family: clashDisplay-var;
+  src: url("../font/ClashDisplay-Variable.ttf");
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-color: #f2ff00;
+  --bg-color: #000;
+  --clash-font: clashDisplay-var;
+  --Akira-font: Akira-Expanded;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
 }
 
 a {
   display: inline-block;
 }
 
+.container {
+  max-width: 1820px;
+}
+
+/* 
+=================
+Header Section(Navbar) 
+=================
+*/
+
 .nav-links {
   min-width: 90px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 110px;
+  color: white;
+  transition: 0.5s linear all;
+  font-family: var(--clash-font), sans-serif;
+  margin-right: 5px;
+  font-weight: 400;
+}
+
+.nav-links:hover {
+  background: var(--primary-color);
+  color: black;
+}
+
+
+.nav-logo > a {
+  width: 172px;
+}
+
+.nav-logo > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-collapsed > div:first-child {
+  border-color: rgba(255, 255, 255, 0.26);
+}
+
+#search {
+  font-family: var(--clash-font);
+  font-weight: 400;
+}
+
+.cart-btn {
+  background: var(--primary-color);
+}
+
+.cart-btn,
+.cart-btn > svg {
+  transition: 0.5s linear all;
+}
+
+.cart-btn:hover {
+  background: var(--bg-color);
+}
+.cart-btn:hover > svg {
+  color: white;
+}
+
+.search-icon {
+  display: none;
+}
+
+.auth-btn {
+  border-color: var(--primary-color);
+  display: flex !important;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-family: var(--clash-font);
+}
+
+.navbar-toggler {
+  position: relative;
+}
+
+.navbar-toggler::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background: var(--primary-color);
+  top: 5px;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 1820px) {
+  .nav-links,
+  .auth-btn {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-logo > a {
+    width: 100px;
+  }
+  .auth-btn {
+    font-size: 12px;
+  }
 }
