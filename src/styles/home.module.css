@@ -11,7 +11,50 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
+.banner_sec::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  height: 627px;
+  width: 627px;
+  background: #f7e700;
+  filter: blur(872px);
+  right: 0;
+  bottom: 0;
+}
+
 .banner_sec > * {
   position: relative;
   z-index: 3;
+}
+
+.banner_row {
+  flex-wrap: wrap-reverse;
+}
+
+.memebers {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+.memebers > img {
+  height: 98px;
+  width: 98px;
+  object-fit: contain;
+  margin-left: -30px;
+}
+
+.memebers > img:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .memebers {
+    margin: 20px 0;
+  }
+  .memebers > img {
+    height: 45px;
+    width: 45px;
+    margin-left: -10px;
+  }
 }

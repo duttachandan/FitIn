@@ -56,13 +56,17 @@ a {
 }
 
 .grad-text {
-  background: linear-gradient(to left, rgba(255, 255, 255, 85%), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 25%), white);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   font-family: var(--clash-font);
   font-size: 27px;
   font-weight: 500;
+}
+
+.primary-text {
+  color: var(--primary-color);
 }
 
 /* 
@@ -190,7 +194,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .col-4,
   .col-8 {
     width: 100%;
@@ -200,6 +204,9 @@ header {
     font-size: 16px;
     font-weight: 500;
   }
+}
+
+@media screen and (max-width: 768px) {
   /* Header Section */
   .nav-logo > a {
     width: 80px;
