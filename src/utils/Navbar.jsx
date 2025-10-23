@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
 import Logo from "../assets/Logo.png";
@@ -5,10 +7,11 @@ import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { FiShoppingBag } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa";
-import Menu from "@/features/Menu";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
-  var toggler = false;
+
+  let [toggler, setToggler] = React.useState(false);
 
   return (
     <header className="absolute top-0 left-0 right-0 py-3">
@@ -26,11 +29,12 @@ const Navbar = () => {
             <div
               className={`flex fixed 3xl:static mx-auto p-[5px] 
               backdrop-blur-[13px] top-0 bottom-0
-              ${toggler ? "right-0" : "right-[-100%]"}
+              ${toggler ? "right-0 md:w-[60%] w-[90%] bg-black/30" : "right-[-100%]"}
               items-center 3xl:rounded-full border 
-              overflow-hidden`}
+              overflow-hidden transition-all duration-500`}
             >
-              <ul className="flex items-center flex-col mx-auto 3xl:pt-0 pt-[50px] 3xl:flex-row">
+              <ul className="flex items-center flex-col 
+              mx-auto 3xl:pt-0 pt-[50px] 3xl:flex-row">
                 <li>
                   <Link className="nav-links py-[21px] px-[30px]" href="">
                     Home
@@ -42,9 +46,10 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-links py-[21px] px-[30px]" href="">
+                  <a className="relative nav-links py-[21px] px-[30px]">
                     Features
-                  </Link>
+                    <RiArrowDropDownLine />
+                  </a>
                 </li>
                 <li>
                   <Link className="nav-links py-[21px] px-[30px]" href="">
@@ -63,22 +68,24 @@ const Navbar = () => {
                 </li>
                 <li>
                   <form
-                    className="bg-black hidden items-center 
-                  px-[15px] py-[18px] rounded-full mr-[5px] 4xl:flex"
+                    className="3xl:bg-black 3xl:text-white text-black bg-[#f2ff00] 
+                    flex 3xl:hidden 4xl:flex items-center 
+                    px-[15px] py-[18px] rounded-full mr-[5px]"
                   >
                     <button type="submit">
-                      <CiSearch className="text-white text-[24px]" />
+                      <CiSearch className="text-[24px]" />
                     </button>
                     <input
                       type="text"
                       name="search"
                       id="search"
                       placeholder="Search"
-                      className="focus:outline-0 text-white pl-[6px]"
+                      className="focus:outline-0 pl-[6px]"
                     />
                   </form>
                 </li>
-                <li className="4xl:hidden flex mr-[10px] cursor-pointer">
+                <li className="4xl:hidden 
+                3xl:flex hidden mr-[10px] cursor-pointer">
                   <CiSearch className="text-white text-[24px]" />
                 </li>
                 <li className="hidden items-center 3xl:flex">
@@ -113,7 +120,15 @@ const Navbar = () => {
           </div>
 
           {/* Hamberger icon */}
-          <Menu toggler={toggler} />
+          <div
+            onClick={() => setToggler(!toggler)}
+            className="navbar-toggler 3xl:hidden block"
+          >
+            <span
+              className="h-[2px] w-[30px]
+            bg-[#f2ff00] inline-block"
+            ></span>
+          </div>
         </nav>
       </div>
     </header>

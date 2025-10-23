@@ -34,6 +34,35 @@ a {
 
 .container {
   max-width: 1820px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-4 {
+  width: calc(4 * 8.33%);
+  padding: 0 15px;
+}
+
+.col-8 {
+  width: calc(8 * 8.33%);
+  padding: 0 15px;
+}
+
+.grad-text {
+  background: linear-gradient(to left, rgba(255, 255, 255, 85%), white);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: var(--clash-font);
+  font-size: 27px;
+  font-weight: 500;
 }
 
 /* 
@@ -41,6 +70,10 @@ a {
 Header Section(Navbar) 
 =================
 */
+
+header {
+  z-index: 10;
+}
 
 .nav-links {
   min-width: 90px;
@@ -120,7 +153,6 @@ Header Section(Navbar)
   right: -10px;
   bottom: 0;
   transition: 1s linear;
-  opacity: 0;
 }
 
 .auth-btn > span {
@@ -159,6 +191,16 @@ Header Section(Navbar)
 }
 
 @media screen and (max-width: 768px) {
+  .col-4,
+  .col-8 {
+    width: 100%;
+  }
+
+  .grad-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  /* Header Section */
   .nav-logo > a {
     width: 80px;
   }

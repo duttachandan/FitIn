@@ -1,0 +1,17 @@
+.banner_sec {
+  background: url("../assets/01..png") no-repeat top/cover;
+  min-height: 100vh;
+}
+
+.banner_sec::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.banner_sec > * {
+  position: relative;
+  z-index: 3;
+}
