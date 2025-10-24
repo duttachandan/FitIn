@@ -69,6 +69,11 @@ a {
   color: var(--primary-color);
 }
 
+.title1 {
+  font-size: 141px;
+  font-family: var(--Akira-font);
+}
+
 /* 
 =================
 Header Section(Navbar) 
@@ -188,6 +193,9 @@ header {
 }
 
 @media screen and (max-width: 1820px) {
+  .title1 {
+    font-size: 80px;
+  }
   .nav-links,
   .auth-btn {
     font-size: 15px;
@@ -198,6 +206,10 @@ header {
   .col-4,
   .col-8 {
     width: 100%;
+  }
+
+  .title1 {
+    font-size: 32px;
   }
 
   .grad-text {

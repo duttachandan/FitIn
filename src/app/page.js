@@ -47,20 +47,20 @@ export default function Home() {
                   {
                     profilesOfMembers.map((data, index) => (
                       <Image key={index} src={data.profile} alt={data.alternteText} />
-                      )
+                    )
                     )
                   }
                 </div>
                 <div className="grad-text">
-                  <span className="primary-text">12k +</span> Membership Enjoy Our Programs
+                  <span className="primary-text">12k +</span> MembershipEnjoy Our Programs
                 </div>
               </div>
               <div className="col-8">
-              <h1 className="title1">
-                FocusFuel
-                <br />
-                <span className="primary-text">Fitness</span>
-              </h1>
+                <h1 className="title1 text-white">
+                  FocusFuel
+                  <br />
+                  <span className="primary-text">Fitness</span>
+                </h1>
               </div>
             </div>
           </div>
