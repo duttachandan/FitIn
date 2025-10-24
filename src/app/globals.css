@@ -74,6 +74,16 @@ a {
   font-family: var(--Akira-font);
 }
 
+.cursor {
+  position: fixed;
+  z-index: 11;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  mix-blend-mode: difference;
+}
+
 /* 
 =================
 Header Section(Navbar) 
@@ -203,6 +213,9 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
+  }
   .col-4,
   .col-8 {
     width: 100%;

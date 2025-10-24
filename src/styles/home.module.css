@@ -8,6 +8,7 @@
   position: absolute;
   z-index: 2;
   inset: 0;
+  height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
@@ -47,6 +48,8 @@
 .memebers > img:first-child {
   margin-left: 0;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .memebers {

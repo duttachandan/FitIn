@@ -1,3 +1,4 @@
+import Cursor from "@/features/Cursor";
 import "./globals.css";
 import Navbar from "@/utils/Navbar";
 
@@ -10,7 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        <Cursor />
+        <Navbar />
         {children}
       </body>
     </html>

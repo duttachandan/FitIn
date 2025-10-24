@@ -30,6 +30,7 @@ export default function Home() {
   return (
     <>
       <main>
+        {/* Banner Section */}
         <section
           className={`${home.banner_sec} 
           flex items-end`}
