@@ -45,6 +45,11 @@ a {
   margin: 0 -15px;
 }
 
+.col-6 {
+  width: 50%;
+  padding: 0 15px;
+}
+
 .col-4 {
   width: calc(4 * 8.33%);
   padding: 0 15px;
@@ -192,6 +197,18 @@ header {
   right: 0;
 }
 
+.navbar-toggler::after,
+.navbar-toggler span {
+  transition: 0.5s linear all;
+}
+.navbar-toggler.active span {
+  transform: rotate(-45deg) translateX(5px);
+}
+
+.navbar-toggler.active::after {
+  transform: rotate(45deg) translateX(5px);
+}
+
 @media screen and (max-width: 1820px) {
   .title1 {
     font-size: 80px;
@@ -208,10 +225,6 @@ header {
     width: 100%;
   }
 
-  .title1 {
-    font-size: 32px;
-  }
-
   .grad-text {
     font-size: 16px;
     font-weight: 500;
@@ -219,6 +232,9 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .title1 {
+    font-size: 35px;
+  }
   /* Header Section */
   .nav-logo > a {
     width: 80px;

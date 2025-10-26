@@ -52,7 +52,7 @@ export default function Home() {
                   }
                 </div>
                 <div className="grad-text">
-                  <span className="primary-text">12k +</span> MembershipEnjoy Our Programs
+                  <span className="primary-text">12k +</span> Membership Enjoy Our Programs
                 </div>
               </div>
               <div className="col-8">

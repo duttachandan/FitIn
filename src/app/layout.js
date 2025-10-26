@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/utils/Navbar";
+import Footer from "@/utils/Footer";
 
 export const metadata = {
   title: "FitIn",
@@ -10,8 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar/>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
