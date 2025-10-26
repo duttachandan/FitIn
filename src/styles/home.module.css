@@ -1,6 +1,8 @@
 .banner_sec {
   background: url("../assets/01..png") no-repeat top/cover;
-  min-height: 100vh;
+  min-height: 140vh;
+  padding: 120px 0;
+  position: relative;
 }
 
 .banner_sec::after {
@@ -8,6 +10,7 @@
   position: absolute;
   z-index: 2;
   inset: 0;
+  height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
 }
 
@@ -46,6 +49,99 @@
 
 .memebers > img:first-child {
   margin-left: 0;
+}
+
+.visit_link {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  color: white;
+  font-family: var(--clash-font);
+  align-items: center;
+  position: relative;
+  font-size: 33px;
+}
+
+.visit_link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.8);
+  bottom: -10px;
+  transition: 0.5s linear;
+  border-radius: 50px;
+}
+
+.visit_link::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #f7e700;
+  bottom: -10px;
+  transition: 0.5s linear;
+  z-index: 2;
+  border-radius: 50px;
+}
+
+.visit_link:hover::before {
+  width: 100%;
+}
+
+.visit_link > svg {
+  transform: rotate(45deg);
+  transition: 0.5s linear;
+}
+
+.visit_link:hover > svg {
+  transform: rotate(90deg);
+  color: var(--primary-color);
+}
+
+.scroll_logo {
+  font-family: var(--clash-font);
+  font-size: 27px;
+  font-weight: 500;
+  position: relative;
+  padding-left: 10px;
+  letter-spacing: 1.4;
+}
+
+.scroll_logo > span {
+  animation: upDown 4s linear infinite;
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+.scroll_logo::after {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 1px;
+  left: 0;
+  top: 50%;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1024px) {
+  .visit_link {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .scroll_logo {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {

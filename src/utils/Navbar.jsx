@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Logo from "../assets/Logo.png";
 import Link from "next/link";
@@ -10,8 +10,13 @@ import { FaArrowRight } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
-
   let [toggler, setToggler] = React.useState(false);
+
+  useEffect(() => {
+    const value = toggler ? "hidden" : "auto";
+    document.body.style.overflowY = value;
+    document.documentElement.style.overflowY = value;
+  }, [toggler]);
 
   return (
     <header className="absolute top-0 left-0 right-0 py-3">
@@ -29,12 +34,18 @@ const Navbar = () => {
             <div
               className={`flex fixed 3xl:static mx-auto p-[5px] 
               backdrop-blur-[13px] top-0 bottom-0
-              ${toggler ? "right-0 md:w-[60%] w-[90%] min-h-[562px] bg-black/30" : "right-[-100%]"}
+              ${
+                toggler
+                  ? "right-0 md:w-[60%] w-[90%] bg-black/30 min-h-[562px]"
+                  : "right-[-100%]"
+              }
               items-center 3xl:rounded-full border 
               overflow-hidden transition-all duration-500`}
             >
-              <ul className="flex items-center flex-col 
-              mx-auto 3xl:pt-0 pt-[50px] 3xl:flex-row">
+              <ul
+                className="flex items-center flex-col 
+              mx-auto 3xl:pt-0 pt-[50px] 3xl:flex-row"
+              >
                 <li>
                   <Link className="nav-links py-[21px] px-[30px]" href="">
                     Home
@@ -84,8 +95,10 @@ const Navbar = () => {
                     />
                   </form>
                 </li>
-                <li className="4xl:hidden 
-                3xl:flex hidden mr-[10px] cursor-pointer">
+                <li
+                  className="4xl:hidden 
+                3xl:flex hidden mr-[10px] cursor-pointer"
+                >
                   <CiSearch className="text-white text-[24px]" />
                 </li>
                 <li className="hidden items-center 3xl:flex">
