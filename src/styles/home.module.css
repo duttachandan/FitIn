@@ -3,6 +3,17 @@
   min-height: 140vh;
   padding: 120px 0;
   position: relative;
+  background-color: black;
+  animation: ImageVisible 2s linear;
+}
+
+@keyframes ImageVisible {
+  0% {
+    filter: blur(10px) opacity(0);
+  }
+  100% {
+    filter: blur(0) opacity(1);
+  }
 }
 
 .banner_sec::after {
@@ -40,11 +51,18 @@
   align-items: center;
   margin: 40px 0;
 }
+
 .memebers > img {
   height: 98px;
   width: 98px;
   object-fit: contain;
   margin-left: -30px;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.memebers > img:hover {
+  box-shadow: 1px 1px 10px #f7e700;
 }
 
 .memebers > img:first-child {
@@ -113,14 +131,14 @@
 }
 
 @keyframes upDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-20px);
   }
 }
-
 
 .scroll_logo::after {
   position: absolute;
@@ -141,6 +159,10 @@
   }
   .scroll_logo {
     font-size: 20px;
+  }
+  .members > img {
+    width: 60px;
+    height: 60px;
   }
 }
 

@@ -10,7 +10,10 @@ import Profile2 from "../assets/profile2.png";
 import Profile3 from "../assets/profile3.png";
 import Profile4 from "../assets/profile4.png";
 
-export default function Home() {
+export default async function Page() {
+
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const profilesOfMembers = [
     {
       profile: Profile1,
@@ -29,6 +32,7 @@ export default function Home() {
       alternteText: "Profiles of Members",
     },
   ];
+
   return (
     <>
       <main>
@@ -48,6 +52,7 @@ export default function Home() {
                 <div className={`${home.memebers}`}>
                   {profilesOfMembers.map((data, index) => (
                     <Image
+                      className="rounded-full"
                       key={index}
                       src={data.profile}
                       alt={data.alternteText}
@@ -89,7 +94,6 @@ export default function Home() {
         </section>
 
         {/* Grop Workout Section */}
-        
       </main>
     </>
   );

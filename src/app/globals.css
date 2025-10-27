@@ -87,6 +87,7 @@ a {
   border-radius: 50%;
   background: white;
   mix-blend-mode: difference;
+  cursor: none;
 }
 
 /* 
@@ -157,6 +158,10 @@ header {
   display: none;
 }
 
+.search-icon:hover {
+  color: var(--primary-color);
+}
+
 .auth-btn {
   border-color: var(--primary-color);
   display: flex !important;
@@ -194,6 +199,7 @@ header {
 
 .navbar-toggler {
   position: relative;
+  cursor: pointer;
 }
 
 .navbar-toggler::after {
@@ -205,6 +211,7 @@ header {
   top: 5px;
   left: 0;
   right: 0;
+  cursor: pointer;
 }
 
 .navbar-toggler::after,

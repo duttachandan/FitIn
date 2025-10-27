@@ -25,7 +25,7 @@ export default {
       },
       screens: {
         xl: "1350px", // 👈 Overrides default 1280px
-      },
+      }
     },
   },
   plugins: [],
