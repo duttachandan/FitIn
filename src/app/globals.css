@@ -28,6 +28,11 @@ body {
   font-weight: 100;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 a {
   display: inline-block;
 }
@@ -77,6 +82,12 @@ a {
 .title1 {
   font-size: 141px;
   font-family: var(--Akira-font);
+}
+
+.title2 {
+  font-size: 25px;
+  font-family: var(--Akira-font);
+  font-weight: 900;
 }
 
 .cursor {

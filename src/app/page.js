@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import home from "../styles/home.module.css";
+import Services from "@/utils/Services";
 
 import { FaArrowUp } from "react-icons/fa6";
 
@@ -11,7 +12,6 @@ import Profile3 from "../assets/profile3.png";
 import Profile4 from "../assets/profile4.png";
 
 export default async function Page() {
-
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   const profilesOfMembers = [
@@ -93,7 +93,8 @@ export default async function Page() {
           </div>
         </section>
 
-        {/* Grop Workout Section */}
+        {/*Services Provided Section */}
+        <Services />
       </main>
     </>
   );

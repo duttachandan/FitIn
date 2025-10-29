@@ -7,6 +7,21 @@
   animation: ImageVisible 2s linear;
 }
 
+.services-sec {
+  overflow: hidden;
+}
+
+.slider_card {
+  border-top: 1px solid rgba(255, 255, 255, 0.33);
+  border-right: 1px solid rgba(255, 255, 255, 0.33);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+.slick_container {
+  max-width: 100%;
+  padding: 0;
+}
+
 @keyframes ImageVisible {
   0% {
     filter: blur(10px) opacity(0);
@@ -152,6 +167,72 @@
   transform: translateY(-50%);
 }
 
+/* Trainer Section */
+
+.slider_card {
+  background: black;
+  padding: 24px;
+}
+
+.services_card {
+  background: url("../assets/Trainer-Background.png") center/cover no-repeat;
+  /* background-blend-mode: darken; */
+  color: white;
+  width: fit-content;
+  position: relative;
+  padding: 2.604vw;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.services_title {
+  position: relative;
+  font-size: 1.302vw;
+}
+
+.services_title::after {
+  content: "";
+  height: 23.1px;
+  width: 69px;
+  background: url("../assets/quotation.png") no-repeat center/contain;
+  position: absolute;
+  top: -60%;
+  left: 0;
+}
+
+.services_count {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  color: transparent;
+  font-size: 7.344vw;
+  font-weight: 900;
+  font-family: var(--Akira-font);
+}
+
+.services_card > .services_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  max-width: 485px;
+  z-index: 9;
+}
+
+.services_img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+  .services_card {
+    margin-top: 0;
+  }
+  .services_title::after {
+    max-width: 50px;
+    top: -100%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .visit_link {
     margin-bottom: 30px;
@@ -174,5 +255,31 @@
     height: 45px;
     width: 45px;
     margin-left: -10px;
+  }
+  .slider_card {
+    padding-top: 50px;
+  }
+  .services_title::after {
+    max-width: 30px;
+    top: -145%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slider_card {
+    padding: 10px;
+  }
+  .services_img {
+    width: 50% !important;
+  }
+  .services_card {
+    min-height: 200px;
+    padding-top: 50px;
+  }
+  .services_title {
+    font-size: 18px;
+  }
+  .services_count {
+    font-size: 34px;
   }
 }
