@@ -215,11 +215,13 @@
   width: 70%;
   max-width: 485px;
   z-index: 9;
+  height: 100%;
 }
 
 .services_img > img {
   height: 100%;
   width: 100%;
+  object-position: right;
   object-fit: contain;
 }
 
@@ -266,6 +268,9 @@
 }
 
 @media screen and (max-width: 576px) {
+  .banner_sec {
+    padding: 80px 0;
+  }
   .slider_card {
     padding: 10px;
   }
@@ -280,6 +285,6 @@
     font-size: 18px;
   }
   .services_count {
-    font-size: 34px;
+    font-size: 67px;
   }
 }
