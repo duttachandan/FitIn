@@ -16,6 +16,7 @@ const Services = () => {
   const options = {
     type: "loop",
     perPage: 3,
+    perMove: 1,
     autoplay: true,
     interval: 1000,
     pagination: false,
