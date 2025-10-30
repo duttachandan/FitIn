@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import Lottie from "lottie-react";
-import LottieAnimation from "@/Loader/Loading.json";
+import Error from "@/Loader/Error 404.json";
 
-const Loading = () => {
+const Custom404 = () => {
   return (
     <div
       className={`fixed inset-0 
@@ -13,7 +13,7 @@ const Loading = () => {
       duration-500`}
     >
       <Lottie
-        animationData={LottieAnimation}
+        animationData={Error}
         loop={true}
         autoplay={true}
         style={{ width: 500 }}
@@ -23,4 +23,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Custom404;

@@ -2,6 +2,9 @@ import Cursor from "@/features/Cursor";
 import "./globals.css";
 import Navbar from "@/utils/Navbar";
 import Footer from "@/utils/Footer";
+import SmoothScrollWrapper from "@/utils/SmoothScrollWrapper";
+import AnimateOnScroll from "@/utils/AnimateOnScroll";
+import ScrolltoTop from "@/utils/ScrolltoTop";
 
 export const metadata = {
   title: "FitIn",
@@ -13,9 +16,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Cursor />
-        <Navbar  />
-        {children}
-        <Footer />
+        <AnimateOnScroll>
+          <Navbar />
+          <SmoothScrollWrapper>
+            {children}
+            <Footer />
+          </SmoothScrollWrapper>
+        </AnimateOnScroll>
+        <ScrolltoTop />
       </body>
     </html>
   );

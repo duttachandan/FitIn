@@ -22,6 +22,16 @@
   --Akira-font: Akira-Expanded;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none; /* hide scrollbar */
+  -ms-overflow-style: none;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);

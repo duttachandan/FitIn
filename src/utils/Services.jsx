@@ -17,7 +17,7 @@ const Services = () => {
     type: "loop",
     perPage: 3,
     autoplay: true,
-    interval: 2000,
+    interval: 1000,
     pagination: false,
     arrows: false,
     breakpoints: {

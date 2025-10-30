@@ -11,7 +11,7 @@ import Profile2 from "../assets/profile2.png";
 import Profile3 from "../assets/profile3.png";
 import Profile4 from "../assets/profile4.png";
 
-import eclipse from "@/assets/Eclipse.png";
+// import eclipse from "@/assets/Eclipse.png";
 import About from "@/assets/About.png";
 
 export default async function Page() {
@@ -78,7 +78,11 @@ export default async function Page() {
               </div>
               <div className="col-8">
                 <div className="h-full flex flex-col justify-between">
-                  <h1 className="title1 text-white">
+                  <h1
+                    data-speed-y="5"
+                    data-offset="-50"
+                    className="title1 luxy-el text-white"
+                  >
                     FocusFuel
                     <br />
                     <span className="primary-text">Fitness</span>

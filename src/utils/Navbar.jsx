@@ -47,33 +47,48 @@ const Navbar = () => {
               mx-auto 3xl:pt-0 pt-[50px] 3xl:flex-row"
               >
                 <li>
-                  <Link className="nav-links py-[21px] px-[30px]" href="">
+                  <Link
+                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    href=""
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-links py-[21px] px-[20px]" href="">
+                  <Link
+                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[20px]"
+                    href=""
+                  >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <a className="relative nav-links py-[21px] px-[30px]">
+                  <a className="relative nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]">
                     Features
                     <RiArrowDropDownLine />
                   </a>
                 </li>
                 <li>
-                  <Link className="nav-links py-[21px] px-[30px]" href="">
+                  <Link
+                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    href=""
+                  >
                     WorkOuts
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-links py-[21px] px-[30px]" href="">
+                  <Link
+                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    href=""
+                  >
                     Trainers
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-links py-[21px] px-[30px]" href="">
+                  <Link
+                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    href=""
+                  >
                     Testimonials
                   </Link>
                 </li>
@@ -135,7 +150,9 @@ const Navbar = () => {
           {/* Hamberger icon */}
           <div
             onClick={() => setToggler(!toggler)}
-            className={`navbar-toggler 3xl:hidden block ${toggler ? 'active' : ''}`}
+            className={`navbar-toggler 3xl:hidden block ${
+              toggler ? "active" : ""
+            }`}
           >
             <span
               className="h-[2px] w-[30px]
