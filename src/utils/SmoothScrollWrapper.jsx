@@ -18,12 +18,13 @@ const SmoothScrollWrapper = ({ children }) => {
           wrapperSpeed: 0.08,
         });
       }
-      
+
       luxyInstance = luxy;
     })();
 
     return () => {
       if (luxyInstance) {
+        console.log(luxyInstance);
         luxyInstance.destroy();
       }
     };

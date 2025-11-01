@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import home from "../styles/home.module.css";
-import Services from "@/utils/Services";
-
 import { FaArrowUp } from "react-icons/fa6";
+
+import Services from "@/utils/Services";
+import AboutServices from "@/utils/AboutServices";
 
 // Profiles
 import Profile1 from "../assets/profile1.png";
@@ -13,6 +14,8 @@ import Profile4 from "../assets/profile4.png";
 
 // import eclipse from "@/assets/Eclipse.png";
 import About from "@/assets/About.png";
+import CallIcon from "@/assets/call.png";
+
 
 export default async function Page() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -115,14 +118,14 @@ export default async function Page() {
                 Further
               </p>
             </div>
-            <div className="row">
+            <div className="row items-center">
               <div className="col-6">
                 <div className={home.about_img}>
-                  <Image src={About} alt="" />
+                  <Image src={About} alt="About main image" />
                 </div>
               </div>
               <div className="col-6">
-                <div className="About-content">
+                <div className="About-content text-white">
                   <h3 className={home.about_subTitle}>
                     We believe fitness is more than just physical. It’s about
                     building confidence, discipline, and a lifestyle you can be
@@ -142,11 +145,26 @@ export default async function Page() {
                       step of the way
                     </div>
                   </div>
+                  <div className={home.call_icon} href="/">
+                    <Image src={CallIcon} alt="call icon" />
+                    <div>
+                      <div className={home.customer_supp}>
+                        CUSTOMER SUPPORT
+                        <br />
+                        <span className="text-[#f7e700]">(888)4000-2424</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* 2nd Services Section  */}
+
+        {/* 2nd About Our Gym Section */}
+        <AboutServices/>
       </main>
     </>
   );

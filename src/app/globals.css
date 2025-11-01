@@ -108,7 +108,7 @@ a {
   border-radius: 50%;
   background: white;
   mix-blend-mode: difference;
-  cursor: none;
+  pointer-events:none;
 }
 
 /* 
