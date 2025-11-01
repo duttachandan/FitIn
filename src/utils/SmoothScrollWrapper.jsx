@@ -9,10 +9,16 @@ const SmoothScrollWrapper = ({ children }) => {
 
     (async () => {
       const luxy = (await import("luxy.js")).default;
-      luxy.init({
-        wrapper: "#luxy",
-        wrapperSpeed: 0.08,
-      });
+      console.log(navigator.userAgent);
+      const isMobile = /Mobi|Android|iPhone|iPod|iPad|Phone/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        luxy.init({
+          wrapper: "#luxy",
+          wrapperSpeed: 0.08,
+        });
+      }
+      
       luxyInstance = luxy;
     })();
 

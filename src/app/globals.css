@@ -31,7 +31,6 @@
   -ms-overflow-style: none;
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -278,6 +277,13 @@ header {
   .title1 {
     font-size: 35px;
   }
+
+  /* Disabling Luxy in Mobile Devices */
+
+  /* #luxy{
+    transform: none !important;
+  } */
+
   /* Header Section */
   .nav-logo > a {
     width: 80px;
