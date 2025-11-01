@@ -60,6 +60,10 @@ a {
   margin: 0 -15px;
 }
 
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
 .col-6 {
   width: 50%;
   padding: 0 15px;
@@ -108,7 +112,7 @@ a {
   border-radius: 50%;
   background: white;
   mix-blend-mode: difference;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 /* 
@@ -264,7 +268,7 @@ header {
   .col-4,
   .col-8,
   .col-6 {
-    width: 100% !important;
+    width: 100%;
   }
 
   .grad-text {

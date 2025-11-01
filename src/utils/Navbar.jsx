@@ -34,11 +34,10 @@ const Navbar = () => {
             <div
               className={`flex fixed 3xl:static mx-auto p-[5px] 
               backdrop-blur-[13px] top-0 bottom-0
-              ${
-                toggler
+              ${toggler
                   ? "right-0 md:w-[60%] w-[90%] bg-black/30 min-h-[562px]"
                   : "right-[-100%]"
-              }
+                }
               items-center 3xl:rounded-full border 
               overflow-hidden transition-all duration-500`}
             >
@@ -150,9 +149,8 @@ const Navbar = () => {
           {/* Hamberger icon */}
           <div
             onClick={() => setToggler(!toggler)}
-            className={`navbar-toggler 3xl:hidden block ${
-              toggler ? "active" : ""
-            }`}
+            className={`navbar-toggler 3xl:hidden block ${toggler ? "active" : ""
+              }`}
           >
             <span
               className="h-[2px] w-[30px]
