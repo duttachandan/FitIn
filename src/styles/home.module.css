@@ -1,5 +1,5 @@
 .banner_sec {
-  background: url("../assets/01..png") no-repeat top/cover;
+  background: url("../assets/01..webp") no-repeat top/cover;
   min-height: 140vh;
   padding: 120px 0;
   position: relative;
@@ -325,7 +325,7 @@
 
 .second_services {
   padding: 82px 0;
-  background: url("../assets/05..png") no-repeat center/cover;
+  background: url("../assets/05..webp") no-repeat center/cover;
 }
 
 .second_services_image {
