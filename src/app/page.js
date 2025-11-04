@@ -15,6 +15,7 @@ import Profile4 from "../assets/profile4.png";
 // import eclipse from "@/assets/Eclipse.png";
 import About from "@/assets/About.png";
 import CallIcon from "@/assets/call.png";
+import TrainingServices from "@/utils/TrainingServices";
 
 
 export default async function Page() {
@@ -162,6 +163,7 @@ export default async function Page() {
         </section>
 
         {/* 2nd Services Section  */}
+        <TrainingServices/>
 
         {/* 2nd About Our Gym Section */}
         <AboutServices/>
