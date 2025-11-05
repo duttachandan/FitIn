@@ -35,63 +35,63 @@ const Navbar = () => {
               className={`flex fixed 3xl:static mx-auto p-[5px] 
               backdrop-blur-[13px] top-0 bottom-0
               ${toggler
-                  ? "right-0 md:w-[60%] w-[90%] bg-black/30 min-h-[562px]"
+                  ? "right-0 md:w-[60%] w-[90%] bg-black/30"
                   : "right-[-100%]"
                 }
               items-center 3xl:rounded-full border 
-              overflow-hidden transition-all duration-500`}
+              overflow-y-auto 3xl:overflow-hidden transition-all duration-500`}
             >
               <ul
                 className="flex items-center flex-col 
               mx-auto 3xl:pt-0 pt-[50px] 3xl:flex-row"
               >
-                <li>
+                <li className="mb-[10px] 3xl:mb-0">
                   <Link
-                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    className="nav-links pb-[21px] pt-[21px] px-[30px]"
                     href=""
                   >
                     Home
                   </Link>
                 </li>
-                <li>
+                <li className="mb-[10px] 3xl:mb-0">
                   <Link
-                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[20px]"
+                    className="nav-links pb-[21px] pt-[21px] px-[20px]"
                     href=""
                   >
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <a className="relative nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]">
+                  <a className="relative nav-links pb-[21px] pt-[21px] px-[30px]">
                     Features
                     <RiArrowDropDownLine />
                   </a>
                 </li>
-                <li>
+                <li className="mb-[10px] 3xl:mb-0">
                   <Link
-                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    className="nav-links pb-[21px] pt-[21px] px-[30px]"
                     href=""
                   >
                     WorkOuts
                   </Link>
                 </li>
-                <li>
+                <li className="mb-[10px] 3xl:mb-0">
                   <Link
-                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    className="nav-links pb-[21px] pt-[21px] px-[30px]"
                     href=""
                   >
                     Trainers
                   </Link>
                 </li>
-                <li>
+                <li className="mb-[10px] 3xl:mb-0">
                   <Link
-                    className="nav-links pb-[21px]  pt-[0] 3xl:pt-[21px] px-[30px]"
+                    className="nav-links pb-[21px] pt-[21px] px-[30px]"
                     href=""
                   >
                     Testimonials
                   </Link>
                 </li>
-                <li>
+                <li className="mb-[10px] 3xl:mb-0">
                   <form
                     className="3xl:bg-black 3xl:text-white text-black bg-[#f2ff00] 
                     flex 3xl:hidden 4xl:flex items-center 
