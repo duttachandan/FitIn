@@ -15,13 +15,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Cursor />
+
         <AnimateOnScroll>
           <Navbar />
           <SmoothScrollWrapper>
             {children}
             <Footer />
           </SmoothScrollWrapper>
+          <Cursor />
         </AnimateOnScroll>
         <ScrolltoTop />
       </body>

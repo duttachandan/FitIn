@@ -107,13 +107,14 @@ a {
 
 .cursor {
   position: fixed;
-  z-index: 11;
+  z-index: 999;
   height: 16px;
   width: 16px;
   border-radius: 50%;
   background: white;
   mix-blend-mode: difference;
   pointer-events: none;
+  transition: 0.2s linear all;
 }
 
 /* 
