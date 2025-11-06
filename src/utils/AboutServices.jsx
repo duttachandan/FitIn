@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect } from "react";
+import React from "react";
 import home from "@/styles/home.module.css";
 import Image from "next/image";
 
@@ -8,12 +6,10 @@ import Frame from "@/assets/Frame-25.png";
 import Right from "@/assets/Right.png";
 
 const AboutServices = () => {
-  useEffect(() => {
-    
-  });
   return (
     <section className={home.second_services}>
       <div className="container">
+        {/* Heading */}
         <div className={`row ${home.about_heading}`}>
           <div className="col-6">
             <h2 className={`title2 ${home.about_title}`}>About Our Gym</h2>
@@ -22,6 +18,8 @@ const AboutServices = () => {
             Turn your workout into a lifestyle that moves you forward
           </p>
         </div>
+
+        {/* Gym Services */}
         <div className="row items-center flex-wrap-reverse">
           <div className="col-6">
             <div className={home.second_services_image}>

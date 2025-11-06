@@ -48,7 +48,7 @@ const Navbar = () => {
                 <li className="mb-[10px] 3xl:mb-0">
                   <Link
                     className="nav-links pb-[21px] pt-[21px] px-[30px]"
-                    href=""
+                    href="/"
                   >
                     Home
                   </Link>

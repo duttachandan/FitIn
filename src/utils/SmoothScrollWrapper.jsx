@@ -7,25 +7,44 @@ const SmoothScrollWrapper = ({ children }) => {
   useEffect(() => {
     let luxyInstance;
 
-    (async () => {
+    // Delay initialization until DOM is fully rendered
+    const timer = setTimeout(async () => {
       const luxy = (await import("luxy.js")).default;
-      console.log(navigator.userAgent);
-      const isMobile = /Mobi|Android|iPhone|iPod|iPad|Phone/i.test(navigator.userAgent);
+      const isMobile = /Mobi|Android|iPhone|iPod|iPad|Phone/i.test(
+        navigator.userAgent
+      );
 
-      if (!isMobile) {
+      if (!isMobile && luxyRef.current) {
+        // Destroy any previous instance before initializing
+        try {
+          luxy.destroy();
+        } catch (e) {}
+
+        // Debug check — you should see >0 if elements exist
+        console.log(
+          "Luxy initializing... found",
+          document.querySelectorAll(".luxy-el").length,
+          "elements"
+        );
+
+        
+
         luxy.init({
           wrapper: "#luxy",
-          wrapperSpeed: 0.08,
+          targets: ".luxy-el",
+          wrapperSpeed: 0.05,
         });
-      }
 
-      luxyInstance = luxy;
-    })();
+        luxyInstance = luxy;
+      }
+    }, 300); // ⏱️ wait 300ms to ensure DOM & children are ready
 
     return () => {
+      clearTimeout(timer);
       if (luxyInstance) {
-        console.log(luxyInstance);
-        luxyInstance.destroy();
+        try {
+          luxyInstance.destroy();
+        } catch (e) {}
       }
     };
   }, []);

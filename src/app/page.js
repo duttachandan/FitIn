@@ -17,10 +17,7 @@ import About from "@/assets/About.png";
 import CallIcon from "@/assets/call.png";
 import TrainingServices from "@/utils/TrainingServices";
 
-
-export default async function Page() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
+export default function Page() {
   const profilesOfMembers = [
     {
       profile: Profile1,
@@ -72,20 +69,32 @@ export default async function Page() {
                 </div>
 
                 <div className={`${home.scroll_logo} text-white mt-3 mb-3`}>
-                  <span style={{ animationDelay: `${1 * 0.1}s` }}>S</span>
-                  <span style={{ animationDelay: `${2 * 0.1}s` }}>c</span>
-                  <span style={{ animationDelay: `${3 * 0.1}s` }}>r</span>
-                  <span style={{ animationDelay: `${4 * 0.1}s` }}>o</span>
-                  <span style={{ animationDelay: `${5 * 0.1}s` }}>l</span>
-                  <span style={{ animationDelay: `${6 * 0.1}s` }}>l</span>
+                  <span data-aos="fade-left" data-aos-delay="200">
+                    S
+                  </span>
+                  <span data-aos="fade-left" data-aos-delay="300">
+                    c
+                  </span>
+                  <span data-aos="fade-left" data-aos-delay="400">
+                    r
+                  </span>
+                  <span data-aos="fade-left" data-aos-delay="500">
+                    o
+                  </span>
+                  <span data-aos="fade-left" data-aos-delay="600">
+                    l
+                  </span>
+                  <span data-aos="fade-left" data-aos-delay="700">
+                    l
+                  </span>
                 </div>
               </div>
               <div className="col-8">
                 <div className="h-full flex flex-col justify-between">
                   <h1
-                    data-speed-y="5"
-                    data-offset="-50"
-                    className="title1 luxy-el text-white"
+                    className="title1 luxy-el text-white leading-none"
+                    data-speed-y="-8"
+                    data-offset="10"
                   >
                     FocusFuel
                     <br />
@@ -95,7 +104,7 @@ export default async function Page() {
                     Visit Now
                     <FaArrowUp
                       className="ml-[50px] 
-                  font-light"
+                      font-light"
                     />
                   </Link>
                 </div>
@@ -112,41 +121,43 @@ export default async function Page() {
           <div className="container">
             <div className={`row ${home.about_heading}`}>
               <div className="col-6">
-                <h2 className={`title2 ${home.about_title}`}>About Our Gym</h2>
+                <h2 data-aos="fade-up" className={`title2 ${home.about_title}`}>
+                  About Our Gym
+                </h2>
               </div>
-              <p className="grad-text col-6">
+              <p data-aos="fade-up" className="grad-text col-6">
                 Empowering Every Body to Move Stronger, Live Better, and Go
                 Further
               </p>
             </div>
             <div className="row items-center">
               <div className="col-6">
-                <div className={home.about_img}>
+                <div data-aos="zoom-in" className={home.about_img}>
                   <Image src={About} alt="About main image" />
                 </div>
               </div>
               <div className="col-6">
                 <div className="About-content text-white">
-                  <h3 className={home.about_subTitle}>
+                  <h3 data-aos="fade-up" className={home.about_subTitle}>
                     We believe fitness is more than just physical. It’s about
                     building confidence, discipline, and a lifestyle you can be
                     proud of.
                   </h3>
                   <div className="row">
-                    <div className="col-6">
+                    <div data-aos="fade-up" className="col-6">
                       Founded with the version of creating a spacet for all
                       fitness levels .Our gym offers expert guidence modern
                       equipment and an uplifting atmosphere to help you achieve
                       your goals.
                     </div>
-                    <div className="col-6">
+                    <div data-aos="fade-up" className="col-6">
                       Whether you’re a beginner or a seasoned athlete. We’re
                       here to support your journey with personalized training,
                       diverse programs and a community that motivates you every
                       step of the way
                     </div>
                   </div>
-                  <div className={home.call_icon} href="/">
+                  <div data-aos="fade-up" className={home.call_icon} href="/">
                     <Image src={CallIcon} alt="call icon" />
                     <div>
                       <div className={home.customer_supp}>
@@ -163,10 +174,10 @@ export default async function Page() {
         </section>
 
         {/* 2nd Services Section  */}
-        <TrainingServices/>
+        <TrainingServices />
 
         {/* 2nd About Our Gym Section */}
-        <AboutServices/>
+        <AboutServices />
       </main>
     </>
   );
